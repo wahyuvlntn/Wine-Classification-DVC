@@ -1,0 +1,13 @@
+# Ignore DVC cache directory
+.dvc/
+
+# Ignore data and model folders (DVC handles versioning)
+data/
+model/
+
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+
+# Ignore virtual environment folder
+venv/
