@@ -1,0 +1,25 @@
+schema: '2.0'
+stages:
+  preprocess:
+    cmd: python src/preprocess.py
+    outs:
+    - path: data/wine_test.csv
+      hash: md5
+      md5: b6a960b8e7e370f0131c2db688498d8b
+      size: 9458
+    - path: data/wine_train.csv
+      hash: md5
+      md5: b4f8cd6f46a0e53db36762216149eafe
+      size: 36875
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: data/wine_train.csv
+      hash: md5
+      md5: b4f8cd6f46a0e53db36762216149eafe
+      size: 36875
+    outs:
+    - path: model/model.pkl
+      hash: md5
+      md5: 3a118cac3467aaa2908fd3d3243e8652
+      size: 1759
