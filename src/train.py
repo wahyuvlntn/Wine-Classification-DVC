@@ -1,8 +1,11 @@
 import pandas as pd
+import os
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 import joblib
 import yaml
+
+os.makedirs("model", exist_ok=True)
 
 # Load parameters
 with open("params.yaml") as f:

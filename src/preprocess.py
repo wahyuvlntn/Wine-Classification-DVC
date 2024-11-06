@@ -1,8 +1,11 @@
 import pandas as pd
+import os
 from sklearn.datasets import load_wine
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 import yaml
+
+os.makedirs("data", exist_ok=True)
 
 # Load parameters
 with open("params.yaml") as f:
