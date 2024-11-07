@@ -3,4 +3,5 @@ train:
   random_state: 42
   model:
     type: LogisticRegression
-    max_iter: 90
+    max_iter: 50
+    learning_rate: 0.5

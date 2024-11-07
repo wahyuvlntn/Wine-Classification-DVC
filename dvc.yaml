@@ -8,5 +8,10 @@ stages:
     cmd: python src/train.py
     deps:
       - data/wine_train.csv
+    params:
+      - train.test_size
+      - train.random_state
+      - train.model.max_iter
+      - train.model.learning_rate
     outs:
       - model/model.pkl
